@@ -112,6 +112,21 @@
 			 }
 		  });
 		} catch(e){} 
+
+		var hasDonation = false;
+		try {
+			quantity = ele.querySelector("span.star-div > span.quantity")
+		  if (quantity){
+			hasDonation = true
+			
+			  
+			} 
+		} catch(e){} 
+
+
+
+
+
 		
 		var data = {};
 		data.chatname = name;
@@ -120,8 +135,8 @@
 		data.textColor = "";
 		data.chatmessage = msg;
 		data.chatimg = chatimg;
-		data.hasDonation = "";
-		data.hasMembership = "";;
+		data.hasDonation = hasDonation;
+		data.hasMembership = "";
 		data.contentimg = "";
 		data.textonly = settings.textonlymode || false;
 		data.type = "estrim";
